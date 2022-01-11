@@ -1,1 +1,1 @@
-json.partial! "actions/action", action: @action
+json.partial! 'actions/action', action: @action

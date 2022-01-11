@@ -1,21 +1,21 @@
-require "test_helper"
+require 'test_helper'
 
 class ActionsControllerTest < ActionDispatch::IntegrationTest
   setup do
     @action = actions(:one)
   end
 
-  test "should get index" do
+  test 'should get index' do
     get actions_url
     assert_response :success
   end
 
-  test "should get new" do
+  test 'should get new' do
     get new_action_url
     assert_response :success
   end
 
-  test "should create action" do
+  test 'should create action' do
     assert_difference('Action.count') do
       post actions_url, params: { action: { amount: @action.amount, author_id: @action.author_id, name: @action.name } }
     end
@@ -23,22 +23,23 @@ class ActionsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to action_url(Action.last)
   end
 
-  test "should show action" do
+  test 'should show action' do
     get action_url(@action)
     assert_response :success
   end
 
-  test "should get edit" do
+  test 'should get edit' do
     get edit_action_url(@action)
     assert_response :success
   end
 
-  test "should update action" do
-    patch action_url(@action), params: { action: { amount: @action.amount, author_id: @action.author_id, name: @action.name } }
+  test 'should update action' do
+    patch action_url(@action),
+          params: { action: { amount: @action.amount, author_id: @action.author_id, name: @action.name } }
     assert_redirected_to action_url(@action)
   end
 
-  test "should destroy action" do
+  test 'should destroy action' do
     assert_difference('Action.count', -1) do
       delete action_url(@action)
     end

@@ -1,1 +1,0 @@
-json.partial! "join_table_category_activities/join_table_category_activity", join_table_category_activity: @join_table_category_activity

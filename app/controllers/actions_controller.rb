@@ -1,5 +1,5 @@
 class ActionsController < ApplicationController
-  before_action :set_action, only: %i[ show edit update destroy ]
+  before_action :set_action, only: %i[show edit update destroy]
 
   # GET /actions or /actions.json
   def index
@@ -7,8 +7,7 @@ class ActionsController < ApplicationController
   end
 
   # GET /actions/1 or /actions/1.json
-  def show
-  end
+  def show; end
 
   # GET /actions/new
   def new
@@ -16,8 +15,7 @@ class ActionsController < ApplicationController
   end
 
   # GET /actions/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /actions or /actions.json
   def create
@@ -25,7 +23,7 @@ class ActionsController < ApplicationController
 
     respond_to do |format|
       if @action.save
-        format.html { redirect_to action_url(@action), notice: "Action was successfully created." }
+        format.html { redirect_to action_url(@action), notice: 'Action was successfully created.' }
         format.json { render :show, status: :created, location: @action }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +36,7 @@ class ActionsController < ApplicationController
   def update
     respond_to do |format|
       if @action.update(action_params)
-        format.html { redirect_to action_url(@action), notice: "Action was successfully updated." }
+        format.html { redirect_to action_url(@action), notice: 'Action was successfully updated.' }
         format.json { render :show, status: :ok, location: @action }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +50,20 @@ class ActionsController < ApplicationController
     @action.destroy
 
     respond_to do |format|
-      format.html { redirect_to actions_url, notice: "Action was successfully destroyed." }
+      format.html { redirect_to actions_url, notice: 'Action was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_action
-      @action = Action.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def action_params
-      params.require(:action).permit(:name, :amount, :author_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_action
+    @action = Action.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def action_params
+    params.require(:action).permit(:name, :amount, :author_id)
+  end
 end

@@ -1,1 +1,1 @@
-json.array! @actions, partial: "actions/action", as: :action
+json.array! @actions, partial: 'actions/action', as: :action
