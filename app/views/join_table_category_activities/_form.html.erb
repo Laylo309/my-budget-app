@@ -1,0 +1,17 @@
+<%= form_with(model: join_table_category_activity) do |form| %>
+  <% if join_table_category_activity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(join_table_category_activity.errors.count, "error") %> prohibited this join_table_category_activity from being saved:</h2>
+
+      <ul>
+        <% join_table_category_activity.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

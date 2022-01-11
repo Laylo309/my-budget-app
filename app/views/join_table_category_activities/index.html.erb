@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Join Table Category Activities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @join_table_category_activities.each do |join_table_category_activity| %>
+      <tr>
+        <td><%= link_to 'Show', join_table_category_activity %></td>
+        <td><%= link_to 'Edit', edit_join_table_category_activity_path(join_table_category_activity) %></td>
+        <td><%= link_to 'Destroy', join_table_category_activity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Join Table Category Activity', new_join_table_category_activity_path %>

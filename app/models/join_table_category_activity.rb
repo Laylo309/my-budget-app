@@ -1,0 +1,2 @@
+class JoinTableCategoryActivity < ApplicationRecord
+end
