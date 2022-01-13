@@ -1,5 +1,5 @@
-class Action < ApplicationRecord
-  belongs_to :author, class_name: 'User'
+class Activity < ApplicationRecord
+  belongs_to :user
   has_and_belongs_to_many :categories
 
   validates :name, :amount, :categories, presence: true
