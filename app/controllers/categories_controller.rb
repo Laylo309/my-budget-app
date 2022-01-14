@@ -4,11 +4,13 @@ class CategoriesController < ApplicationController
 
   # GET /categories or /categories.json
   def index
-    @categories = Category.all
+    @categories = current_user.categories
   end
 
   # GET /categories/1 or /categories/1.json
-  def show; end
+  def show
+    @activities = @category.activities.order(created_at: 'desc')
+  end
 
   # GET /categories/new
   def new
@@ -35,7 +37,6 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to categories_url, notice: 'Category was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 
@@ -43,11 +44,11 @@ class CategoriesController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_category
-    @category = Category.includes(:actions).find(params[:id])
+    @category = Category.includes(:activities).find(params[:id])
   end
 
   # Only allow a list of trusted parameters through.
   def category_params
-    params.require(:category).permit(:name, :icon)
+    params.require(:category).permit(:name, :icon, :author_id)
   end
 end

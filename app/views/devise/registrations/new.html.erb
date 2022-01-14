@@ -1,34 +1,21 @@
 <h2>Sign up</h2>
-
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
-
-<div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+  <nav class="navbar navbar-dark nav-bg fixed-top">
+    <div class="container-fluid">
+      <%= link_to root_path, class: "back-button" do%>
+        <img src="https://img.icons8.com/ios-glyphs/24/ffffff/back.png"/>
+      <% end%>
+      <a class="navbar-brand text-light text font-" href="#">REGISTER</a>
+      <button type="submit" class="button nav-bg text-light"> Next</button>
+  </nav>
+  <div class="field pt-5">
+    <%= f.text_field :name, autofocus: true, autocomplete: "name",placeholder: "Name", class: "input" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: "Email", class: "input" %>
+    <%= f.password_field :password, autocomplete: "new-password",placeholder: "Password, it must be 6 characters", class: "input" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",placeholder: "Password confirmation", class: "input" %>
   </div>
 <% end %>
-
-<%= render "devise/shared/links" %>
+<div class="text-center">
+        <%= link_to "Log in", new_session_path(resource_name), class: "text-decoration-none forgot-password"%>
+      </div>
