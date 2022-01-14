@@ -9,7 +9,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1 or /categories/1.json
   def show
-  @activities = @category.activities.order(created_at: 'desc')
+    @activities = @category.activities.order(created_at: 'desc')
   end
 
   # GET /categories/new
