@@ -1,6 +1,7 @@
 class Category < ApplicationRecord
   belongs_to :user
-  has_and_belongs_to_many :activities
+  has_many :activities_categories, dependent: :destroy
+  has_many :activities, through: :activities_categories
 
   validates :name, presence: true
   validates :icon, presence: true

@@ -1,5 +1,2 @@
-<h1>New Activity</h1>
-
 <%= render 'form', activity: @activity %>
-
-<%= link_to 'Back', activities_path %>
+<%=render partial: "_partials/navbar", locals: {name: "Transaction", back_path: root_path } %>

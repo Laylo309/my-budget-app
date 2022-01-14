@@ -54,3 +54,5 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'cancancan'
 gem 'devise'
+gem 'bulma-rails', '~> 0.9.2'
+gem 'htmlbeautifier'

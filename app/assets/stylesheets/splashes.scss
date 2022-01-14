@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: #f1f3f2;
+  height: 100vh;
 }
 
 .splash-title {
@@ -30,7 +31,7 @@
 }
 
 .field {
-display: flex;
-flex-direction: column;
-border-color: #fdfdfd;
+  display: flex;
+  flex-direction: column;
+  border-color: #fdfdfd;
 }
