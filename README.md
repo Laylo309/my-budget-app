@@ -17,7 +17,8 @@ Everything will be based on the ERD class diagram presented below.
     <p>Entity Relationship Diagram (ERD) of Budget App project</p>
 </div>
 
-## [Live demo](https://shrouded-sea-17784.herokuapp.com/)
+## [Live Version](https://shrouded-sea-17784.herokuapp.com/)
+## [Demo Video](https://www.loom.com/share/59d3ad1ac20e4d33b85117b086b5339e)
 
  <img src="./images/Screenshot_2.png" width="200px" height= "400px"> <img src="./images/Screenshot_3.png" width="200px" height= "400px"> <img src="./images/Screenshot_4.png" width="200px" height= "400px">
  <img src="./images/Screenshot_5.png" width="200px" height= "400px"> <img src="./images/Screenshot_6.png" width="200px" height= "400px"> <img src="./images/Screenshot_7.png" width="200px" height= "400px">
@@ -30,7 +31,7 @@ To run the project locally, copy up and running follow these simple example step
  (else You can install `Rails` just with this simple command  ```gem install rails```)
  - clone the project with the following command line : 
 ```
-$ git clone git@github.com:Hamzaoutdoors/BLog_app.git
+$ git clone git@github.com:Laylo309/my-budget-app.git
 ```
  - Then go to the right folder 
 ```
@@ -103,6 +104,5 @@ Give a ⭐️ if you like this project!
 - My standup team 😍
 - My family's support 🙌
 
-## 📝 License
 
-This project is [MIT](https://github.com/Hamzaoutdoors/Blog_app/blob/dev/LICENSE.md) licensed.
+
