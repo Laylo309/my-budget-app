@@ -17,9 +17,7 @@ Everything will be based on the ERD class diagram presented below.
     <p>Entity Relationship Diagram (ERD) of Budget App project</p>
 </div>
 
-## Live server link
-
-[Live demo](https://shrouded-sea-17784.herokuapp.com/)
+## [Live demo](https://shrouded-sea-17784.herokuapp.com/)
 
  <img src="./images/Screenshot_2.png" >
  <img src="./images/Screenshot_3.png" >
