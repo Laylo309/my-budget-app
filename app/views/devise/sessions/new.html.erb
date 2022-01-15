@@ -1,0 +1,23 @@
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <nav class="navbar navbar-dark nav-bg fixed-top">
+    <div class="container-fluid">
+      <%= link_to root_path, class: "back-button" do%>
+        <img src="https://img.icons8.com/ios-glyphs/24/ffffff/back.png"/>
+      <% end%>
+      <a class="navbar-brand text-light text font-" href="#">LOGIN</a>
+      <button type="submit" class="button nav-bg text-light"> Log in</button>
+    </nav>
+    <div class="pt-5">
+      <div class="field pt-4">
+        <div class="control">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class:"input"%>
+        </div>
+        <div class="control">
+          <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class:"input"%>
+        </div>
+      </div>
+      <div class="text-center">
+        <%= link_to 'Forgot password?', new_password_path(resource_name), class: "text-decoration-none forgot-password"%>
+      </div>
+    </div>
+  <% end %>

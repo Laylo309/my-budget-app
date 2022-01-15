@@ -1,0 +1,37 @@
+.splash-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1f3f2;
+  height: 100vh;
+}
+
+.splash-title {
+  margin: 15rem 0;
+  font-size: 4rem;
+}
+
+.splash-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.login {
+  color: white !important;
+}
+
+.background {
+  background-color: #f1f3f2;
+}
+
+.login-navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  border-color: #fdfdfd;
+}

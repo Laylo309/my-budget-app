@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+<%=render partial: "_partials/navbar", locals: {name: "Category", back_path: categories_path } %>
+<div class="container">
+  <p class="pt-5">
+  </p>
+  <div class="card p-2">
+    <div class="card-body">
+      <h5 class="card-title">  <%= @category.name %></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= @category.icon %></h6>
+      <p class="card-text">Total amount:<%= total_amount(@activities) %></p>
+    </div>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+    <h2 class="pt-4 text-center">Transactions</h2>
+      <% @activities.each do |activity| %>
+        <tr>
+          <td><%= activity.name %></td>
+          <td>$<%= activity.amount %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%=render partial: "_partials/buttons/button", locals: {name: "Add transaction", button_path: new_activity_path } %>
+</div>

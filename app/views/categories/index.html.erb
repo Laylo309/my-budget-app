@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<%=render partial: "_partials/navbar", locals: {name: "Categories", back_path: categories_path } %>
+<div class="contanier pt-5">
+  <div class="card">
+    <div class="nav-bg d-flex justify-content-end">
+      <p class="text-light fs-6 p-2 bd-highlight">
+        Most recent
+      </p>
+      <p class="text-light fs-6 p-2 bd-highlight">
+        Most ancient
+      </p>
+    </div>
+    <div class="card-body d-flex justify-content-between">
+      <p class="text fs-5">
+        Gift card
+      </p>
+      <p class="fs-5">
+        $50.00
+      </p>
+    </div>
+  </div>
+  <br>
+  <% @categories.each do |category| %>
+    <div class="card m-3 ">
+      <div class="card-body p-4">
+        <%= link_to category_path(category.id), class: "d-flex justify-content-between text-decoration-none" do%>
+          <img src=<%= get_img(category)%> alt='icon photo'>
+          <div>
+            <h5><%= category.name %></h5>
+            <p><%= category.created_at.strftime("%d %m %Y")%></p>
+          </div>
+          <h5>$<%= total_amount(category.activities) %></h5>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  <%=render partial: "_partials/buttons/button", locals: {name: "New Category", button_path: new_category_path } %>
+</div>
