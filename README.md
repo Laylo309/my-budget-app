@@ -19,12 +19,8 @@ Everything will be based on the ERD class diagram presented below.
 
 ## [Live demo](https://shrouded-sea-17784.herokuapp.com/)
 
- <img src="./images/Screenshot_2.png" >
- <img src="./images/Screenshot_3.png" >
- <img src="./images/Screenshot_4.png" >
- <img src="./images/Screenshot_5.png" >
- <img src="./images/Screenshot_6.png" >
- <img src="./images/Screenshot_7.png" >
+ <img src="./images/Screenshot_2.png" width="200px" height= "400px"> <img src="./images/Screenshot_3.png" width="200px" height= "400px"> <img src="./images/Screenshot_4.png" width="200px" height= "400px">
+ <img src="./images/Screenshot_5.png" width="200px" height= "400px"> <img src="./images/Screenshot_6.png" width="200px" height= "400px"> <img src="./images/Screenshot_7.png" width="200px" height= "400px">
 
 
 ## Getting Started
